@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#4FB8EE"
+    tools:context=".activity.LoginActivity">
+
+    <FrameLayout
+        android:id="@+id/background"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/foreground"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/rounded_15"
+        android:backgroundTint="@color/white"
+        android:layout_marginHorizontal="25dp"
+        android:paddingHorizontal="25dp"
+        android:paddingVertical="30dp"
+        android:gravity="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="100dp"
+                android:layout_height="80dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/logo"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:gravity="center_vertical"
+                android:paddingLeft="15dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toEndOf="@+id/imageView"
+                app:layout_constraintTop_toTopOf="parent" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/sf_pro_sans"
+                    android:includeFontPadding="false"
+                    android:text="beebliotheca"
+                    android:textColor="@color/black"
+                    android:textFontWeight="600"
+                    android:textSize="28sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="by BINUS University"
+                    android:includeFontPadding="false"
+                    android:fontFamily="@font/sf_pro_sans"
+                    android:textFontWeight="500"
+                    android:textSize="16sp"
+                    android:textColor="@color/foreground_low"/>
+
+            </LinearLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:textColor="@color/black"
+            android:textColorHint="@color/foreground_low"
+            style="@style/CustomTextInputBorder">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/studentIDForm"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:paddingVertical="10dp"
+                android:paddingHorizontal="15dp"
+                android:gravity="center_vertical"
+                android:background="@drawable/rounded_15"
+                android:backgroundTint="@color/background_high"
+                android:includeFontPadding="false"
+                android:fontFamily="@font/sf_pro_sans"
+                android:textFontWeight="500"
+                android:textSize="20sp"
+                android:textColor="@color/black"
+                android:textColorHint="@color/foreground_low"
+                android:inputType="textEmailAddress"
+                android:hint="Student ID" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            app:passwordToggleEnabled="true"
+            app:endIconMode="password_toggle"
+            app:endIconTint="@color/foreground_low"
+            app:endIconDrawable="@drawable/ic_password_toggle"
+            android:textColor="@color/black"
+            android:textColorHint="@color/foreground_low"
+            style="@style/CustomTextInputBorder">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/passwordForm"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:paddingVertical="10dp"
+                android:paddingHorizontal="15dp"
+                android:gravity="center_vertical"
+                android:background="@drawable/rounded_15"
+                android:backgroundTint="@color/background_high"
+                android:includeFontPadding="false"
+                android:fontFamily="@font/sf_pro_sans"
+                android:textFontWeight="500"
+                android:textSize="20sp"
+                android:textColor="@color/black"
+                android:textColorHint="@color/foreground_low"
+                android:inputType="textPassword"
+                android:hint="Password" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/loginButton"
+            android:layout_marginTop="30dp"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:gravity="center"
+            android:background="@drawable/rounded_15"
+            android:backgroundTint="@color/accent_high"
+            android:includeFontPadding="false"
+            android:fontFamily="@font/sf_pro_sans"
+            android:textFontWeight="700"
+            android:textSize="24sp"
+            android:textColor="@color/white"
+            android:textAllCaps="true"
+            android:text="LOGIN" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

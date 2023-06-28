@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:paddingHorizontal="25dp"
+    android:paddingTop="10dp"
+    tools:context=".activity.fragment.HomeFragment">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="80dp"
+            android:orientation="vertical">
+
+            <SearchView
+                android:id="@+id/searchBar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:iconifiedByDefault="false"
+                android:background="@drawable/rounded_15"
+                android:backgroundTint="@color/background_high"
+                android:queryBackground="@android:color/transparent"
+                android:queryHint="Search" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_marginTop="15dp"
+                android:id="@+id/searchResults"
+                tools:listitem="@layout/item_book"
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+            <LinearLayout
+                android:id="@+id/defaultView"
+                android:visibility="visible"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <GridLayout
+                    android:id="@+id/catParent"
+                    android:layout_marginTop="30dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:rowCount="2"
+                    android:columnCount="3">
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/cat1"
+                        android:layout_marginBottom="20dp"
+                        android:layout_width="165dp"
+                        android:layout_height="100dp"
+                        app:cardCornerRadius="15dp"
+                        android:backgroundTint="@color/foreground_high">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/cat1"/>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/shadow_gradient"/>
+
+                        <TextView
+                            android:gravity="bottom"
+                            android:paddingVertical="15dp"
+                            android:paddingHorizontal="20dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:fontFamily="@font/sf_pro_sans"
+                            android:includeFontPadding="false"
+                            android:textColor="@color/white"
+                            android:textFontWeight="600"
+                            android:textSize="22sp"
+                            android:text="Computer"/>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <View
+                        android:layout_width="20dp"
+                        android:layout_height="match_parent"/>
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/cat2"
+                        android:layout_width="165dp"
+                        android:layout_height="100dp"
+                        app:cardCornerRadius="15dp"
+                        android:backgroundTint="@color/foreground_high">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/cat2"/>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/shadow_gradient"/>
+
+                        <TextView
+                            android:gravity="bottom"
+                            android:paddingVertical="15dp"
+                            android:paddingHorizontal="20dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:fontFamily="@font/sf_pro_sans"
+                            android:includeFontPadding="false"
+                            android:textColor="@color/white"
+                            android:textFontWeight="600"
+                            android:textSize="22sp"
+                            android:text="History"/>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/cat3"
+                        android:layout_width="165dp"
+                        android:layout_height="100dp"
+                        app:cardCornerRadius="15dp"
+                        android:backgroundTint="@color/foreground_high">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/cat3"/>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/shadow_gradient"/>
+
+                        <TextView
+                            android:gravity="bottom"
+                            android:paddingVertical="15dp"
+                            android:paddingHorizontal="20dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:fontFamily="@font/sf_pro_sans"
+                            android:includeFontPadding="false"
+                            android:textColor="@color/white"
+                            android:textFontWeight="600"
+                            android:textSize="22sp"
+                            android:text="Psychology"/>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <View
+                        android:layout_width="20dp"
+                        android:layout_height="match_parent"/>
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/cat4"
+                        android:layout_width="165dp"
+                        android:layout_height="100dp"
+                        app:cardCornerRadius="15dp"
+                        android:backgroundTint="@color/foreground_high">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/cat4"/>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/shadow_gradient"/>
+
+                        <TextView
+                            android:gravity="bottom"
+                            android:paddingVertical="15dp"
+                            android:paddingHorizontal="20dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:fontFamily="@font/sf_pro_sans"
+                            android:includeFontPadding="false"
+                            android:textColor="@color/white"
+                            android:textFontWeight="600"
+                            android:textSize="22sp"
+                            android:text="More"/>
+
+                    </androidx.cardview.widget.CardView>
+
+                </GridLayout>
+
+                <TextView
+                    android:layout_marginTop="30dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/sf_pro_sans"
+                    android:includeFontPadding="false"
+                    android:textColor="@color/black"
+                    android:textFontWeight="600"
+                    android:textSize="28sp"
+                    android:text="Latest Collections"/>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:layout_marginTop="15dp"
+                    android:id="@+id/latestCollection"
+                    android:visibility="visible"
+                    android:nestedScrollingEnabled="true"
+                    tools:listitem="@layout/item_book"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+                <TextView
+                    android:id="@+id/latestCollectionError"
+                    android:visibility="gone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:fontFamily="@font/sf_pro_sans"
+                    android:includeFontPadding="false"
+                    android:textColor="@color/foreground_high"
+                    android:textFontWeight="400"
+                    android:textSize="16sp"
+                    android:textAlignment="center"
+                    android:text="Latest collections books will appear here."/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</FrameLayout>
