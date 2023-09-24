@@ -10,6 +10,7 @@ import android.graphics.PorterDuff;
 import android.graphics.pdf.PdfRenderer;
 import android.net.Uri;
 import android.os.Bundle;
+import android.os.Message;
 import android.os.ParcelFileDescriptor;
 import android.util.Log;
 import android.widget.Toast;
@@ -65,6 +66,7 @@ public class BookDetailsActivity extends Activity {
         binding.webView.getSettings().setSupportMultipleWindows(false);
         binding.webView.setWebViewClient(new WebViewClientAdaptor());
         binding.webView.loadUrl(book.getDocumentURL());
+//        binding.webView.getWebChromeClient().onCreateWindow(binding.webView, false, true, Message.obtain());
 //        loadPDF(book.getDocumentURL());
 //        loadPDF("http://link.springer.com/openurl/pdf?id=doi:10.1007/s00404-022-06704-z");
     }
